@@ -414,7 +414,7 @@ class JsonSchema
                     if( $vli->vlan->private ) {
                         continue;
                     }
-                    if( count( $include_vlans ) && in_array( $vli->vlanid, $include_vlans ) ) {
+                    if( count( $include_vlans ) && !in_array( $vli->vlanid, $include_vlans ) ) {
                         continue;
                     }
                     if( count( $exclude_vlans ) && in_array( $vli->vlanid, $exclude_vlans ) ) {
